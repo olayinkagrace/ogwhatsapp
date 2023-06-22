@@ -1,13 +1,34 @@
-import React from 'react'
-import { Text, View, Button } from 'react-native'
+import React from "react";
+import { Text, View, Button, ScrollView } from "react-native";
+import ChatList from "../components/ChatList";
 
-const HomeScreen = ({navigation}) => {
+const HomeScreen = ({ navigation }) => {
   return (
-   <View>
-    <Text>HomeScreen</Text>
-    <Button title={'ChatScreen'} onPress={() => navigation.navigate('Chat')} />
-   </View>
-  )
-}
+    <ScrollView>
+      <ChatList />
+      <ChatList />
+      <ChatList />
+      <ChatList />
+      <ChatList />
+      <ChatList />
+      <ChatList />
+      <ChatList />
+      <ChatList />
+      <ChatList />
+      <ChatList />
+      <ChatList />
+      <ChatList />
+      <ChatList />
+      <ChatList />
+      <ChatList />
+      <ChatList />
 
-export default HomeScreen
+      <Button
+        title={"ChatScreen"}
+        onPress={() => navigation.navigate("ChatScreen")}
+      />
+    </ScrollView>
+  );
+};
+
+export default HomeScreen;

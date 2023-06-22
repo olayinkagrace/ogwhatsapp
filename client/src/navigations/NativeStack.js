@@ -8,7 +8,7 @@ export function NativeStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Home" component={HomeScreen} options={{headerShown: false}} />
-      <Stack.Screen name="Chat" component={ChatScreen} />
+      <Stack.Screen name="ChatScreen" component={ChatScreen} />
     </Stack.Navigator>
   );
 }

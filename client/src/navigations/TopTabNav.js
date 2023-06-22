@@ -18,7 +18,7 @@ export function TopTabNav() {
 
     }}
     >
-      <Tab.Screen name="Tab" component={NativeStack} />
+      <Tab.Screen name="Chat" component={NativeStack} />
       <Tab.Screen name="Status" component={StatusScreen} />
       <Tab.Screen name="Call" component={CallScreen} />
       <Tab.Screen name="Advert" component={AdvertScreen} />
