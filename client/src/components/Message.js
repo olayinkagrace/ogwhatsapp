@@ -7,7 +7,6 @@ const Message = ({ message }) => {
   const isMyMessage = () => {
     return message.user.id === "u1";
   };
-  console.log(message);
   return (
     <View style={[
         styles.container,
