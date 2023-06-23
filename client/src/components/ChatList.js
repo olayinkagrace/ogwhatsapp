@@ -7,7 +7,11 @@ dayjs.extend(relativeTime);
 
 const ChatList = ({ chat, navigation }) => {
   return (
-    <TouchableOpacity onPress={() => navigation.navigate("ChatScreen")}>
+    <TouchableOpacity
+      onPress={() =>
+        navigation.navigate("ChatScreen", { id: chat.id, name: chat.user.name })
+      }
+    >
       <View style={styles.container}>
         <Image
           source={{
@@ -22,7 +26,9 @@ const ChatList = ({ chat, navigation }) => {
           </Text>
         </View>
         <View>
-          <Text style={styles.time}>{dayjs(chat.lastMessage.createdAt).fromNow()}</Text>
+          <Text style={styles.time}>
+            {dayjs(chat.lastMessage.createdAt).fromNow()}
+          </Text>
           <View style={styles.messageIcon}>
             <MaterialCommunityIcons
               name='checkbox-blank-circle'
@@ -39,7 +45,7 @@ const ChatList = ({ chat, navigation }) => {
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
+    flexDirection: "row",
     marginHorizontal: 10,
     marginVertical: 5,
     height: 70,
@@ -47,7 +53,7 @@ const styles = StyleSheet.create({
     // borderBottomColor: 'lightgrey'
   },
   content: {
-    flex: 1
+    flex: 1,
   },
   bold: {
     fontWeight: "600",

@@ -1,17 +1,24 @@
 import React from "react";
-import { Text, View, Button, ScrollView, FlatList, StyleSheet } from "react-native";
+import {
+  Text,
+  View,
+  Button,
+  ScrollView,
+  FlatList,
+  StyleSheet,
+} from "react-native";
 import ChatList from "../components/ChatList";
-import chats from '../../assets/data/chats.json'
-
-
+import chats from "../../assets/data/chats.json";
 
 const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <FlatList
         data={chats}
-        renderItem={({item}) => <ChatList chat={item} navigation={navigation} />}
-        keyExtractor={item => item.id}
+        renderItem={({ item }) => (
+          <ChatList chat={item} navigation={navigation} />
+        )}
+        keyExtractor={(item) => item.id}
       />
     </View>
   );
@@ -22,8 +29,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     justifyContent: "center",
-    paddingVertical: 50,
-    alignItems: 'stretch'
+    alignItems: "stretch",
   },
 });
 
