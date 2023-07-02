@@ -25,7 +25,7 @@ const ChatList = ({ chat, navigation }) => {
             {chat.lastMessage.text}
           </Text>
         </View>
-        <View>
+        <View style={styles.contain}>
           <Text style={styles.time}>
             {dayjs(chat.lastMessage.createdAt).fromNow()}
           </Text>
@@ -73,6 +73,7 @@ const styles = StyleSheet.create({
   messageIcon: {
     flexDirection: "row",
     marginLeft: 14,
+    alignItems: 'center'
   },
   message: {
     fontWeight: "300",
@@ -86,6 +87,10 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     marginRight: 10,
   },
+  contain: {
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
 });
 
 export default ChatList;

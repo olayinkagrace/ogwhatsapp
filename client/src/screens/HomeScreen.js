@@ -17,7 +17,7 @@ const HomeScreen = ({ navigation }) => {
       <Entypo
         style={styles.message}
         name='mail-with-circle'
-        size={32}
+        size={43}
         color='green'
         onPress={() => navigation.navigate('Contacts')}
       />
@@ -32,12 +32,14 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     justifyContent: "center",
     alignItems: "stretch",
+    paddingTop: 40
   },
   message: {
     alignSelf: 'flex-end',
     position: 'absolute',
     marginRight: 25,
-    marginTop: 800,
+    bottom: 50,
+    right: 10,
     zIndex: 1
   }
 

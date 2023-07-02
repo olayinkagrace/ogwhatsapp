@@ -8,7 +8,6 @@ import {
   ScrollView,
 } from "react-native";
 import chats from "../../assets/data/chats.json";
-import { FontAwesome } from "@expo/vector-icons";
 import { Feather } from '@expo/vector-icons';
 import CallComponent from "../components/CallComponent";
 
