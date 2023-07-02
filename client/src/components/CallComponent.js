@@ -16,7 +16,7 @@ const CallComponent = ({ user }) => {
           </Text>
        
       </View>
-      <Ionicons name="ios-call" size={24} color="green" />
+      <Ionicons name="ios-call" size={24} color="green"  />
     </TouchableOpacity>
 
   );
@@ -25,8 +25,9 @@ const CallComponent = ({ user }) => {
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    padding: 20,
-    alignItems: 'center'
+    padding: 10,
+    alignItems: 'center',
+    marginHorizontal: 7
   },
   info: {
     flex: 1,

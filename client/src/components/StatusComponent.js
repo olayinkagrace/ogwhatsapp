@@ -24,7 +24,7 @@ const StatusComponent = ({ user }) => {
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    padding: 20,
+    padding: 10,
     alignItems: 'center'
   },
   info: {
