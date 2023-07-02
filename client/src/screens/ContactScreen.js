@@ -7,28 +7,27 @@ import {
   StyleSheet,
   ScrollView,
 } from "react-native";
+import ContactComponent from "../components/ContactComponent";
 import chats from "../../assets/data/chats.json";
 import { FontAwesome } from "@expo/vector-icons";
-import { Feather } from '@expo/vector-icons';
-import CallComponent from "../components/CallComponent";
+import { MaterialIcons } from '@expo/vector-icons';
 
-const CallScreen = () => {
+const ContactScreen = () => {
   return (
     <View  style={styles.container}>
       <TouchableOpacity style={styles.wrapper}>
-        <View style={styles.paperClip}>
-          <Feather name="paperclip" size={24} color="white" />
-          </View>
-        <View>
-        <Text style={styles.name}>Create call link</Text>
-      <Text style={styles.whatsAppText}>Share a link for your Whatsapp call</Text>
-        </View>
-       
+        <FontAwesome name='user-circle' size={44} color='green' />
+        <Text style={styles.name}>New group</Text>
       </TouchableOpacity>
-      <Text style={styles.whatsAppText}>Recent</Text>
+      <TouchableOpacity style={styles.wrapper}>
+      <MaterialIcons name="contact-phone" size={44} color="green" />
+        <Text style={styles.name}>New contact</Text>
+        <MaterialIcons name="qr-code" size={34} color="grey" style={styles.qr} />
+      </TouchableOpacity>
+      <Text style={styles.whatsAppText}>Contacts on WhatsApp</Text>
       <FlatList
         data={chats}
-        renderItem={({ item }) => <CallComponent user={item} />}
+        renderItem={({ item }) => <ContactComponent user={item.user} />}
         style={{ backgroundColor: "white" }}
       />
     </View>
@@ -58,16 +57,7 @@ const styles = StyleSheet.create({
     color: 'grey',
     
     marginLeft: 20
-  },
-  paperClip: {
-    width: 50,
-    height: 50,
-    borderRadius: 50,
-    backgroundColor: 'green',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-
+  }
 });
 
-export default CallScreen;
+export default ContactScreen;
