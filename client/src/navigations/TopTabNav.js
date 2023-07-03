@@ -50,6 +50,7 @@ export function TopTabNav() {
         name='Status'
         component={StatusScreen}
         options={{
+          headerShown: false,
           tabBarIcon: ({ focused }) => (
             <Zocial
               name='statusnet'
@@ -63,6 +64,7 @@ export function TopTabNav() {
         name='Call'
         component={CallScreen}
         options={{
+          headerShown: false,
           tabBarIcon: ({ focused }) => (
             <Feather
               name='phone-call'
